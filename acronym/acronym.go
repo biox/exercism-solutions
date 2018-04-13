@@ -23,5 +23,6 @@ func Abbreviate(s string) string {
 			result += strings.ToUpper(acronymLetter)
 		}
 	}
+
 	return result
 }
