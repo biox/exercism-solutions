@@ -1,6 +1,9 @@
 // Package space exports several space-related timing functions
 package space
 
+// Planet is a lil string baby
+type Planet string
+
 // Orbital years in seconds (by planet)
 const (
 	Earth   float64 = 31557600
@@ -14,7 +17,7 @@ const (
 )
 
 // Age calculates your age on a given planet based on orbital years.
-func Age(seconds float64, planet string) float64 {
+func Age(seconds float64, planet Planet) float64 {
 	var age float64
 
 	switch planet {
