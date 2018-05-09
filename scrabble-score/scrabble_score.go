@@ -21,9 +21,9 @@ func Score(word string) int {
 func derivePoints(r rune) (value int) {
 	letter := string(r)
 
-	onePoint, _ := regexp.MatchString("[AEIOULNRSTaeioulnrst]", letter)
-	fmt.Println(onePoint)
-	if onePoint == true {
+	onePoints, _ := regexp.MatchString("[AEIOULNRSTaeioulnrst]", letter)
+	fmt.Println(onePoints)
+	if onePoints == true {
 		return 1
 	}
 
@@ -31,6 +31,8 @@ func derivePoints(r rune) (value int) {
 	if twoPoints {
 		return 2
 	}
+
+	fmt.Println("Something")
 
 	threePoints, _ := regexp.MatchString("[BbCcMmPp]", letter)
 	if threePoints {
